@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In</title>
+  <link rel="stylesheet" href="styleA.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <span>Permit Processing</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="apply.html">Apply Now</a></li>
+        <li><a href="login.html" style="color: #7695eb;">Log In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="apply-now">
+    <h1>Renew Your Barangay Permit</h1>
+    <p>For returning users, please provide your Reference Number to load your details.</p>
+    <form action="update-details.html" method="POST" class="permit-form">
+      <label for="ref-number">Reference Number: <span class="req">*</span></label>
+      <input type="text" id="ref-number" name="ref-number" placeholder="Enter your reference number" required>
+      <button type="button" class="btn-primary" onclick="loadUserDetails()">Load Details</button>
+
+    
+      <label for="name">Full Name: <span class="req">*</span></label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name">
+
+      <label for="address">Address: <span class="req">*</span></label>
+      <input type="text" id="address" name="address" placeholder="Enter your address">
+
+      <label for="contact">Contact Number: <span class="req">*</span></label>
+      <input type="text" id="contact" name="contact" placeholder="Enter your contact number">
+
+      <label for="permit-type">Permit Type: <span class="req">*</span></label>
+      <select id="permit-type" name="permit-type" required>
+        <option value="business-permit">Business Permit</option>
+        <option value="barangay-clearance">Barangay Clearance</option>
+        <option value="building-permit">Building Permit</option>
+      </select>
+
+      <label for="requirements">Upload Updated Requirements (if needed):</label>
+      <input type="file" id="requirements" name="requirements">
+
+      <button type="submit" class="btn-primary"><a href="processing.html" class="payment">Submit Updated Application</a></button>
+    </form>
+  </section>
+
+  <script>
+    function loadUserDetails() {
+      const userData = {
+        name: "Juan Dela Cruz",
+        address: "123 Barangay St.",
+        contact: "09123456789",
+        permitType: "business-permit",
+      };
+      document.getElementById('name').value = userData.name;
+      document.getElementById('address').value = userData.address;
+      document.getElementById('contact').value = userData.contact;
+      document.getElementById('permit-type').value = userData.permitType;
+    }
+  </script>
+
+</body>
+</html>

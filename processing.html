@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In</title>
+  <link rel="stylesheet" href="styleA.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <span>Permit Processing</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="apply.html">Apply Now</a></li>
+        <li><a href="login.html" style="color: #7695eb;">Log In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="apply-now">
+    <h1>Application Status</h1>
+    <p>Track the progress of your Barangay Permit application below:</p>
+
+    <div class="status-tracker">
+      <ul class="status-list">
+        <li class="completed">
+          <span class="step">1</span>
+          <p>Application Submitted</p>
+        </li>
+        <li class="in-progress">
+          <span class="step">2</span>
+          <p>Verification in Progress</p>
+        </li>
+        <li>
+          <span class="step">3</span>
+          <p>Payment Confirmed</p>
+        </li>
+        <li>
+          <span class="step">4</span>
+          <p>Permit Approved</p>
+        </li>
+        <li>
+          <span class="step">5</span>
+          <p>Permit Ready for Pickup</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="update-message">
+      <h2>Latest Update</h2>
+      <p>Your application is currently being verified. Please check back for updates.</p>
+    </div>
+<br>
+    <button class="btn-primary" onclick="document.location='index.html'">Back to Home</button>
+  </section>
+
+  <section class="apply-now">
+    <h1>Payment Method</h1>
+    <p>Please complete the payment to process your permit.</p>
+    <form action="payment-success.html" method="POST" class="permit-form"><br>
+      <label for="payment-method">Choose a Payment Method: <span class="req">*</span></label>
+      <select id="payment-method" name="payment-method" required>
+        <option value="credit-card">Credit/Debit Card</option>
+        <option value="gcash">Gcash</option>
+        <option value="paymaya">PayMaya</option>
+        <option value="bank-transfer">Bank Transfer</option>
+      </select>
+
+
+      <div id="card-details" class="payment-details">
+        <label for="card-number">Card Number: <span class="req">*</span></label>
+        <input type="text" id="card-number" name="card-number" placeholder="Enter your card number">
+
+        <label for="card-name">Cardholder Name: <span class="req">*</span></label>
+        <input type="text" id="card-name" name="card-name" placeholder="Enter name on card">
+
+        <label for="expiry-date">Expiry Date: <span class="req">*</span></label>
+        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
+
+        <label for="cvv">CVV: <span class="req">*</span></label>
+        <input type="text" id="cvv" name="cvv" placeholder="Enter CVV">
+      </div>
+
+      <button type="submit" class="btn-primary"><a href="tracking.html" class="payment">Confirm Payment</a></button>
+    </form>
+  </section>
+</body>
+</html>

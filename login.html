@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In</title>
+  <link rel="stylesheet" href="styleA.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <span>Permit Processing</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="apply.html">Apply Now</a></li>
+        <li><a href="login.html" style="color: #7695eb;">Log In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="login-section">
+    <h1>Log In to Your Account</h1>
+    <form action="dashboard.html" method="POST" class="login-form">
+      <label for="username">Reference Number: <span class="req">*</span></label>
+      <input type="text" id="username" name="username" placeholder="Enter your reference number" required>
+      
+      <label for="password">Password: <span class="req">*</span></label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      
+      <button type="submit" class="btn-primary">Log In</button>
+    </form>
+  </section>
+</body>
+</html>

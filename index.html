@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barangay Permit System</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+  integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <span>Permit Processing</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="login-bar">
+        <input type="text" placeholder="Search..." class="search-bar">
+        <button class="login-btn" onclick="document.location='login.html'">Log In</button>
+      </div>
+    </nav>
+  </header>
+  <script>
+    function toggleAnswer(event) {
+        const answer = event.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>BARANGAY <br><span>PERMIT SYSTEM</span></h1>
+      <p>Efficient, transparent, and accessible permit processing for <br>your barangay needs. Apply, track, and manage permits easily.</p>
+      <button class="btn-primary" onclick="document.location='apply.html'">APPLY NOW</button>
+      <button class="btn-primary" onclick="document.location='renew.html'">RENEW NOW</button>
+    </div>
+    <div class="cards-slider">
+      <div class="card">
+        <img src="business.jpg" alt="Business Permit">
+        <h3>Business Permit</h3>
+        <p>A business permit is an official document that authorizes individuals or 
+          organizations to operate a business legally within a municipality or city.</p>
+          <button><a href="#services">Learn More</a></button>
+      </div>
+      <div class="card active">
+        <img src="clearance.png" alt="Barangay Clearance">
+        <h3>Barangay Clearance</h3>
+        <p>A barangay clearance is a certification from the 
+          local barangay that confirms a person or business complies with community regulations.</p><br>
+          <button><a href="#services">Learn More</a></button>
+      </div>
+      <div class="card">
+        <img src="building.png" alt="Building Permit">
+        <h3>Building Permit</h3>
+        <p>A building permit is a legal authorization for the construction, 
+         renovation, or demolition of a structure to ensure it meets safety standards.</p>
+         <button><a href="#services">Learn More</a></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="services-header">
+    <h2>Our Services</h2>
+    <p>We aim to streamline your permit processing needs with clear guidance and efficient services.</p>
+    </div>
+    <div class="service-container">
+      <div class="service-item">
+        <img src="business.jpg" alt="Business Permit">
+        <h3>Business Permit</h3>
+        <p>A business permit authorizes businesses to legally operate within a municipality or city. It ensures compliance with local laws and regulations, safeguarding both business owners and the community.</p>
+        <ul>
+          <li>Required for all business types</li>
+          <li>Ensures tax compliance</li>
+          <li>Mandatory for securing other licenses</li>
+        </ul>
+      </div>
+      <div class="service-item">
+        <img src="clearance.png" alt="Barangay Clearance">
+        <h3>Barangay Clearance</h3>
+        <p>A barangay clearance certifies that an individual or business complies with local community rules and regulations. It's a key document for various applications, including permits and employment.</p>
+        <ul>
+          <li>Required for business registrations</li>
+          <li>Serves as proof of residency or compliance</li>
+          <li>Accepted for legal or employment purposes</li>
+        </ul>
+      </div>
+      <div class="service-item">
+        <img src="building.png" alt="Building Permit">
+        <h3>Building Permit</h3>
+        <p>A building permit ensures that construction projects meet local safety, zoning, and environmental regulations. This permit is crucial for maintaining the integrity and safety of structures.</p>
+        <ul>
+          <li>Applies to new constructions, renovations, or demolitions</li>
+          <li>Validates adherence to structural safety codes</li>
+          <li>Prevents unauthorized constructions</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="contact">
+    <div class="contact-header">
+      <h2>Contact Us</h2>
+      <p>Have any questions or need assistance? Feel free to reach out to us.</p>
+    </div>
+    <div class="contact-container">
+      <div class="contact-form">
+        <form action="submit_contact_form.php" method="post">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h3>Reach Us At</h3>
+        <p><strong>Email:</strong> support@barangaypermit.com</p>
+        <p><strong>Phone:</strong> +63 912 345 6789</p>
+        <p><strong>Address:</strong> Barangay Office, Street Name, City, Province</p>
+        <p><strong>Operating Hours:</strong> Mon-Fri, 9:00 AM - 5:00 PM</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq">
+    <div class: body1>
+      <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">What is a barangay permit?</div>
+            <div class="faq-answer">A barangay permit is an official document issued by the local barangay government that allows individuals or businesses to operate legally in a specific area.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">How do I apply for a barangay permit?</div>
+            <div class="faq-answer">You can apply for a barangay permit here by click on the "APPLY NOW" button at the home page.</div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">What documents are required for the application?</div>
+            <div class="faq-answer">Take a picture of your valid ID, and any other documents specific to your type of business or activity.</div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">How long does it take to process the application?</div>
+            <div class="faq-answer">Processing times can vary, but it usually takes a few days to a couple of weeks, depending on the barangay's workload.</div>
+        </div>
+    
+          <div>
+            <h2 class="Feedback" style="color: #2a097d;">Feedback</h2>
+            <div class="Feedback">
+            <textarea class="Feedback-item" placeholder="Enter Feedback"></textarea>
+            </div>
+          </div>
+    </div>
+  </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footerContainer">
+        <div class="socialIcons">
+            <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://gmail.com"><i class="fa-brands fa-google"></i></a>
+        </div>
+        <div class="footerNav">
+            <ul><li><a href="index.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="footerBottom">
+        <p>&copy;2024 Permit Processing. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
